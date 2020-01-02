@@ -9,6 +9,14 @@ var connection = mysql.createConnection({
   database: "burgers_db"
 });
 
+// var connection = mysql.createConnection({
+//   host: "sulnwdk5uwjw1r2k.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+//   port: 3306,
+//   user: "kglua36pq5i5phjz",
+//   password: "a18jxca4ev65riyt",
+//   database: "urkrtba03vcfnbnu"
+// });
+
 // Make connection.
 connection.connect(function(err) {
   if (err) {

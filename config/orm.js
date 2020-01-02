@@ -10,6 +10,17 @@ function printQuestionMarks(num) {
   return arr.toString();
 }
 
+// Helper function for generating My SQL syntax
+function objToSql(ob) {
+	var arr = [];
+
+	for (var key in ob) {
+		arr.push(key + "=" + ob[key]);
+	}
+
+	return arr.toString();
+}
+
 var orm = {
     selectAll: function(tableInput, cb) {
       var queryString = "SELECT * FROM " + tableInput + ";";
@@ -41,14 +52,12 @@ var orm = {
         cb(result);
       });
     },
-    // An example of objColVals would be {name: panther, sleepy: true}
     
     updateOne: function(table, objColVals, condition, cb) {
       var queryString = "UPDATE " + table;
   
-      queryString += " SET devoured = 1";
-      // queryString += objColVals;
-      // queryString += objToSql(objColVals);
+      queryString += " SET ";
+      queryString += objToSql(objColVals);
       queryString += " WHERE ";
       queryString += condition;
   
