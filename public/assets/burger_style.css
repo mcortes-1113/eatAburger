@@ -1,7 +1,31 @@
-body {
+.container {
     background-color: lightsalmon;
 }
 
+.title {
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.add-div {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h3 {
+    padding: 10px 0px;
+}
+
 .change-devoured {
-    background-color: lightskyblue;
+    background-color: red;
+    color: white;
+    float: right;
+}
+
+.image {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 5px;
 }
